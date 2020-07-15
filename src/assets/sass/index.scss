@@ -1,0 +1,14 @@
+.index {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .btn-home {
+        background: transparent;
+        color: #fff;
+        border: 2px solid #fff;
+        :hover {
+            background: #ccc;
+        }
+    }
+}
