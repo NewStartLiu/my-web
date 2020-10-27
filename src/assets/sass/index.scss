@@ -1,14 +1,46 @@
 .index {
     min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    .btn-home {
-        background: transparent;
-        color: #fff;
-        border: 2px solid #fff;
-        :hover {
-            background: #ccc;
+    width: 1366px;
+    background: rgba($color: #fff, $alpha: 0.9);
+    margin: 0 auto;
+
+    .el-container {
+        .el-header {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: solid 1px #e6e6e6;
+
+            .el-menu {
+                width: 600px;
+                height: 80px;
+                background: rgba($color: #000000, $alpha: 0);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: #1989fa;
+                border: none;
+
+                .el-menu-item {
+                    opacity: .5;
+                    height: 100%;
+                    line-height: 80px;
+                    font-size: 18px;
+
+                    &:hover {
+                        background: rgba($color: #000000, $alpha: 0);
+                        opacity: 1;
+                    }
+
+                    &.is-active {
+                        opacity: 1;
+                        background: rgba($color: #000000, $alpha: 0);
+                    }
+                }
+            }
+        }
+
+        .main {
+            height: calc(100vh - 80px);
         }
     }
 }
