@@ -1,0 +1,22 @@
+name: my-web
+on: 
+  push:
+    branchs:
+      - master
+
+jobs:
+  install:
+    runs-on: ubuntu-latest
+    steps:
+    - name: install
+      run: npm install
+  
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: build
+      run:
+        npm run build
+        echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
+        docker build -t dockerofliuyi/my-web:latest .
+        docker push dockerofliuyi/my-web:latest
