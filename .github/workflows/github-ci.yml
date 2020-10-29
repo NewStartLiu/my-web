@@ -4,21 +4,17 @@ on:
     branchs:
       - master
 
-jobs:
-  install:
+jobs:  
+  build:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
       uses: actions/checkout@v2.3.3
 
-    - name: install
+    - name: Install
       run: npm install
-  
-  build:
-    needs: install
-    runs-on: ubuntu-latest
-    steps:
-    - name: build
+
+    - name: Build
       run: |
         npm run build
         echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
