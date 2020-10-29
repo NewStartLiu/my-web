@@ -5,7 +5,7 @@ on:
       - master
 
 jobs:  
-  build & deploy:
+  build&deploy:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
@@ -21,7 +21,7 @@ jobs:
         docker build -t dockerofliuyi/my-web:latest .
         docker push dockerofliuyi/my-web:latest
 
-    - name: SSH Remote Commands
+    - name: Deploy
       uses: appleboy/ssh-action@v0.1.3
       with:
         host: ${{ secrets.HOST }}
