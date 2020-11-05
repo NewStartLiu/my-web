@@ -50,3 +50,4 @@ jobs:
           docker-compose stop info
           docker-compose rm -f info
           docker-compose up -d info
+          docker image prune -a -f
