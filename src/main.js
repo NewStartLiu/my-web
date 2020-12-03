@@ -17,6 +17,8 @@ Vue.use(Submenu)
 Vue.use(MenuItemGroup)
 Vue.use(Icon)
 
+console.log(process.env)
+
 new Vue({
     router,
     render: h => h(App),
