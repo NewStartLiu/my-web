@@ -1,15 +1,7 @@
 <!--  -->
 <template>
   <div class="guide">
-    <!-- <el-button class="btn-home" plain @click="$router.push({path:'index'})">进入主页</el-button> -->
-    <iframe
-      style="min-height: 100vh"
-      allow="camera *;microphone *;"
-      allowfullscreen="true"
-      border="0"
-      src="https://live.vhall.com/webinar/inituser/679600434"
-      width="100%"
-    ></iframe>
+    <el-button class="btn-home" plain @click="$router.push({path:'index'})">进入主页</el-button>
   </div>
 </template>
 
