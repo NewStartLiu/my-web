@@ -2,7 +2,7 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import './assets/css/normal.css'
-import { Container,Header,Aside,Main,Button,Menu,MenuItem,Submenu,MenuItemGroup,Icon } from 'element-ui'
+import { Container,Header,Aside,Main,Button,Menu,MenuItem,Submenu,MenuItemGroup,Icon,Timeline,TimelineItem,Card } from 'element-ui'
 
 Vue.config.productionTip = false
 // element
@@ -16,6 +16,9 @@ Vue.use(MenuItem)
 Vue.use(Submenu)
 Vue.use(MenuItemGroup)
 Vue.use(Icon)
+Vue.use(Timeline)
+Vue.use(TimelineItem)
+Vue.use(Card)
 
 console.log(process.env)
 
